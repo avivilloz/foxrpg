@@ -5,6 +5,7 @@ export var MAX_SPEED = 80
 export var FRICTION = 500
 export var ROLL_SPEED = 120
 export var ATTACK_WALK_SPEED = 20
+export var INVINCIBILITY_TIME = 0.5
 
 enum {
 	MOVE,
@@ -17,10 +18,10 @@ var state = MOVE
 var velocity = Vector2.ZERO
 var action_vector = Vector2.DOWN
 
-onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $Position2D/SwordHitbox
+onready var hurtbox = $Hurtbox
 
 func _ready():
 	stats.connect("no_health", self, "queue_free")
@@ -88,4 +89,6 @@ func attack_animation_finished():
 	state = MOVE
 
 func _on_Hurtbox_area_entered(area:Area2D):
-	stats.health -= 1
+	stats.health -= area.damage
+	hurtbox.start_invincibility(INVINCIBILITY_TIME)
+	hurtbox.create_effect()

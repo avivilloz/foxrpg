@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -491,7 +493,7 @@ __meta__ = {
 position = Vector2( 160, 90 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 1280, 720 )
+region_rect = Rect2( 0, 0, 1723.71, 938.107 )
 
 [node name="DirtPathTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -511,6 +513,10 @@ tile_data = PoolIntArray( -458766, 0, 0, -458765, 0, 1, -458764, 0, 1, -458763, 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 136, 80 )
 
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+smoothing_enabled = true
+
 [node name="Enemies" type="YSort" parent="YSort"]
 
 [node name="Bat" parent="YSort/Enemies" instance=ExtResource( 7 )]
@@ -519,11 +525,44 @@ position = Vector2( 48, 80 )
 [node name="Bat2" parent="YSort/Enemies" instance=ExtResource( 7 )]
 position = Vector2( 240, 72 )
 
+[node name="Bat24" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 222, 73 )
+
+[node name="Bat25" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 231, 83 )
+
+[node name="Bat26" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 256, 82 )
+
+[node name="Bat27" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 276, 83 )
+
+[node name="Bat28" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 285, 100 )
+
 [node name="Bat3" parent="YSort/Enemies" instance=ExtResource( 7 )]
-position = Vector2( 248, 112 )
+position = Vector2( 242, 106 )
+
+[node name="Bat29" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 260, 110 )
+
+[node name="Bat30" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 254, 102 )
+
+[node name="Bat31" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 269, 101 )
+
+[node name="Bat32" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 282, 118 )
+
+[node name="Bat33" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 244, 92 )
+
+[node name="Bat34" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 227, 101 )
 
 [node name="Bat4" parent="YSort/Enemies" instance=ExtResource( 7 )]
-position = Vector2( 296, 80 )
+position = Vector2( 325, 122 )
 
 [node name="Bat5" parent="YSort/Enemies" instance=ExtResource( 7 )]
 position = Vector2( -48, 64 )
@@ -550,7 +589,7 @@ position = Vector2( -448, 328 )
 position = Vector2( -40, 216 )
 
 [node name="Bat21" parent="YSort/Enemies" instance=ExtResource( 7 )]
-position = Vector2( -40, 216 )
+position = Vector2( -13, 220 )
 
 [node name="Bat22" parent="YSort/Enemies" instance=ExtResource( 7 )]
 position = Vector2( 392, 112 )
@@ -580,183 +619,7 @@ position = Vector2( 560, -216 )
 position = Vector2( 208, 240 )
 
 [node name="Bat15" parent="YSort/Enemies" instance=ExtResource( 7 )]
-position = Vector2( 208, 240 )
-
-[node name="Bushes" type="YSort" parent="YSort"]
-
-[node name="Bush" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 48, 48 )
-
-[node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 56, 112 )
-
-[node name="Bush12" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 144, -48 )
-
-[node name="Bush13" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -40, -112 )
-
-[node name="Bush14" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -384, 160 )
-
-[node name="Bush15" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -408, 280 )
-
-[node name="Bush16" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 40, 208 )
-
-[node name="Bush17" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 272, 256 )
-
-[node name="Bush18" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 176, 216 )
-
-[node name="Bush19" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 384, 24 )
-
-[node name="Bush20" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 472, -56 )
-
-[node name="Bush21" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 448, -224 )
-
-[node name="Bush22" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 592, 24 )
-
-[node name="Bush23" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 608, 104 )
-
-[node name="Bush24" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 384, 344 )
-
-[node name="Bush25" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -440, -56 )
-
-[node name="Bush26" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -448, 24 )
-
-[node name="Bush27" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -440, 176 )
-
-[node name="Bush28" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 80, -72 )
-
-[node name="Bush29" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 344, -240 )
-
-[node name="Bush30" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 200, -232 )
-
-[node name="Bush31" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 512, -128 )
-
-[node name="Bush32" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -192, -184 )
-
-[node name="Bush33" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -248, -112 )
-
-[node name="Bush34" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 80, 264 )
-
-[node name="Bush35" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 640, 376 )
-
-[node name="Bush36" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 504, -8 )
-
-[node name="Bush37" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 512, 32 )
-
-[node name="Bush38" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -160, 208 )
-
-[node name="Bush39" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -200, 256 )
-
-[node name="Bush40" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -312, 344 )
-
-[node name="Bush41" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -176, 368 )
-
-[node name="Bush42" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -344, -104 )
-
-[node name="Bush43" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -384, -208 )
-
-[node name="Bush44" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -320, -208 )
-
-[node name="Bush45" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 280, -160 )
-
-[node name="Bush47" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 208, -160 )
-
-[node name="Bush48" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 408, -112 )
-
-[node name="Bush49" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 512, -184 )
-
-[node name="Bush50" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 560, 72 )
-
-[node name="Bush51" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 336, 296 )
-
-[node name="Bush52" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 424, 240 )
-
-[node name="Bush53" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 504, 296 )
-
-[node name="Bush54" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 560, 352 )
-
-[node name="Bush55" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 176, 384 )
-
-[node name="Bush56" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 240, 344 )
-
-[node name="Bush57" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 112, 336 )
-
-[node name="Bush58" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 80, 384 )
-
-[node name="Bush46" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 296, -120 )
-
-[node name="Bush3" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 272, 128 )
-
-[node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 120, 32 )
-
-[node name="Bush5" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 288, 24 )
-
-[node name="Bush6" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 288, 24 )
-
-[node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 176, 16 )
-
-[node name="Bush8" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 56, 152 )
-
-[node name="Bush9" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 136, 152 )
-
-[node name="Bush10" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 216, 152 )
-
-[node name="Bush11" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 240, 32 )
+position = Vector2( 174, 266 )
 
 [node name="Grass" type="YSort" parent="YSort"]
 position = Vector2( -8, -8 )
@@ -1132,3 +995,254 @@ position = Vector2( 296, 152 )
 
 [node name="Grass26" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 312, 152 )
+
+[node name="Bushes" type="YSort" parent="YSort"]
+
+[node name="Bush" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 48, 48 )
+
+[node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 56, 112 )
+
+[node name="Bush12" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 144, -48 )
+
+[node name="Bush13" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -40, -112 )
+
+[node name="Bush14" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -384, 160 )
+
+[node name="Bush15" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -408, 280 )
+
+[node name="Bush16" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 40, 208 )
+
+[node name="Bush17" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 272, 256 )
+
+[node name="Bush18" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 176, 216 )
+
+[node name="Bush19" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 384, 24 )
+
+[node name="Bush20" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 472, -56 )
+
+[node name="Bush21" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 448, -224 )
+
+[node name="Bush22" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 592, 24 )
+
+[node name="Bush23" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 608, 104 )
+
+[node name="Bush24" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 384, 344 )
+
+[node name="Bush25" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -440, -56 )
+
+[node name="Bush26" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -448, 24 )
+
+[node name="Bush27" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -440, 176 )
+
+[node name="Bush28" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 80, -72 )
+
+[node name="Bush29" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 344, -240 )
+
+[node name="Bush30" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 200, -232 )
+
+[node name="Bush31" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 512, -128 )
+
+[node name="Bush32" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -192, -184 )
+
+[node name="Bush33" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -248, -112 )
+
+[node name="Bush34" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 80, 264 )
+
+[node name="Bush35" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 640, 376 )
+
+[node name="Bush36" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 504, -8 )
+
+[node name="Bush37" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 512, 32 )
+
+[node name="Bush38" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -160, 208 )
+
+[node name="Bush39" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -200, 256 )
+
+[node name="Bush40" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -312, 344 )
+
+[node name="Bush41" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -176, 368 )
+
+[node name="Bush42" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -344, -104 )
+
+[node name="Bush43" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -384, -208 )
+
+[node name="Bush44" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -320, -208 )
+
+[node name="Bush45" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 280, -160 )
+
+[node name="Bush47" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 208, -160 )
+
+[node name="Bush48" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 408, -112 )
+
+[node name="Bush49" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 512, -184 )
+
+[node name="Bush50" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 560, 72 )
+
+[node name="Bush51" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 336, 296 )
+
+[node name="Bush52" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 424, 240 )
+
+[node name="Bush53" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 504, 296 )
+
+[node name="Bush54" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 560, 352 )
+
+[node name="Bush55" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 176, 384 )
+
+[node name="Bush56" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 240, 344 )
+
+[node name="Bush57" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 112, 336 )
+
+[node name="Bush58" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 80, 384 )
+
+[node name="Bush46" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 296, -120 )
+
+[node name="Bush3" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 272, 128 )
+
+[node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 120, 23 )
+
+[node name="Bush5" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 288, 24 )
+
+[node name="Bush6" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 288, 24 )
+
+[node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 176, 16 )
+
+[node name="Bush8" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 56, 152 )
+
+[node name="Bush9" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 136, 152 )
+
+[node name="Bush10" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 216, 152 )
+
+[node name="Bush11" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 240, 32 )
+
+[node name="Trees" type="YSort" parent="YSort"]
+
+[node name="Tree" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 44, -16 )
+
+[node name="Tree2" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -6, -177 )
+
+[node name="Tree3" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 268, -241 )
+
+[node name="Tree4" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 577, -157 )
+
+[node name="Tree5" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 490, -80 )
+
+[node name="Tree6" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 345, 87 )
+
+[node name="Tree7" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 209, 113 )
+
+[node name="Tree8" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 226, 269 )
+
+[node name="Tree9" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 178, 154 )
+
+[node name="Tree10" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -43, 286 )
+
+[node name="Tree11" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -214, 313 )
+
+[node name="Tree12" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -275, 393 )
+
+[node name="Tree13" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -262, 205 )
+
+[node name="Tree14" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -349, 207 )
+
+[node name="Tree15" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -355, -8 )
+
+[node name="Tree16" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -449, -101 )
+
+[node name="Tree17" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -256, -183 )
+
+[node name="Tree18" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( -145, -55 )
+
+[node name="Tree19" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 230, -70 )
+
+[node name="Tree20" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 661, 166 )
+
+[node name="Tree21" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 695, 339 )
+
+[node name="Tree22" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 719, -58 )
+
+[node name="Tree23" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 723, -215 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 8 )]
