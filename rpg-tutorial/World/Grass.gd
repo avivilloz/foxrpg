@@ -7,6 +7,6 @@ func create_effect():
 	get_parent().add_child(grassEffectScene)
 	grassEffectScene.global_position = global_position
 
-func _on_Hurtbox_area_entered(area:Area2D):
+func _on_Hurtbox_area_entered(_area:Area2D):
 	create_effect()
 	queue_free()

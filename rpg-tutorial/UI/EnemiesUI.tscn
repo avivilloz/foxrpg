@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/EnemiesUI.gd" type="Script" id=1]
+[ext_resource path="res://UI/BebasNeueRegular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="EnemiesUI" type="Control"]
+margin_right = 320.0
+margin_bottom = 180.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 159.0
+margin_right = 47.0
+margin_bottom = 179.0
+theme = SubResource( 2 )
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
