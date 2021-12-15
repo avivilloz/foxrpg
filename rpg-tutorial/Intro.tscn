@@ -417,14 +417,14 @@ texture = ExtResource( 7 )
 position = Vector2( 99, 124 )
 frames = SubResource( 61 )
 animation = "Animate"
-frame = 55
+frame = 12
 playing = true
 
 [node name="BatAnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 213, 127 )
 frames = SubResource( 67 )
 animation = "Animate"
-frame = 2
+frame = 4
 playing = true
 
 [node name="Label" type="Label" parent="."]
